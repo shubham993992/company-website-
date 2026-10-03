@@ -84,14 +84,14 @@ window.addEventListener('resize', () => {
 // cycles through this pool independently and forever, so the panel keeps
 // looking "alive" rather than freezing after the first reveal.
 const DETECTION_PRESETS = [
-  { top: 16, left: 10, w: 15, h: 13, label: 'Surface crack' },
-  { top: 54, left: 60, w: 18, h: 15, label: 'Pothole' },
-  { top: 22, left: 68, w: 12, h: 10, label: 'Edge erosion' },
-  { top: 58, left: 20, w: 14, h: 12, label: 'Crack cluster' },
-  { top: 34, left: 42, w: 16, h: 13, label: 'Rutting' },
-  { top: 12, left: 38, w: 12, h: 10, label: 'Raveling' },
-  { top: 46, left: 8, w: 13, h: 11, label: 'Surface crack' },
-  { top: 64, left: 48, w: 15, h: 12, label: 'Pothole' },
+  { top: 16, left: 10, w: 15, h: 13, label: 'Pattern matched' },
+  { top: 54, left: 60, w: 18, h: 15, label: 'Anomaly flagged' },
+  { top: 22, left: 68, w: 12, h: 10, label: 'Insight generated' },
+  { top: 58, left: 20, w: 14, h: 12, label: 'Signal detected' },
+  { top: 34, left: 42, w: 16, h: 13, label: 'Object identified' },
+  { top: 12, left: 38, w: 12, h: 10, label: 'Trend spotted' },
+  { top: 46, left: 8, w: 13, h: 11, label: 'Data extracted' },
+  { top: 64, left: 48, w: 15, h: 12, label: 'Outlier found' },
 ];
 
 function randomPreset() {
@@ -139,7 +139,6 @@ function setupDetectionCycle(containerSelector, boxSelector, { showLabel = true 
 }
 
 setupDetectionCycle('#heroScreen', '.detect-box', { showLabel: true });
-setupDetectionCycle('#demoVideo', '.demo-video__box', { showLabel: false });
 
 // ---------- Contact form submission ----------
 // Points at the FastAPI backend. When this page is served BY that same
